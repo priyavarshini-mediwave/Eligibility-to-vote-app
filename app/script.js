@@ -39,22 +39,31 @@ calculateBtn.addEventListener('click', function() {
     // concatenation
     printToResult(result)
 })*/
+function Print(text, classn) {
+  if (text) result.innerHTML = "<h3 class='classn'>" + text + "</h3>";
+}
 
+let resulttext = "";
 checkbtn.addEventListener("click", function () {
   const age = ageInput.value;
   if (!age) {
-    result.innerHTML = "<h3 class='alert'>Enter age</h3>";
+    resulttext = "Enter age";
+    classname = "alert";
+    Print(result, classname);
     return;
     //console.log("Enter age");
   }
   if (age < 18) {
     console.log("Not Eligibile");
-    result.innerHTML = "<h3 class='noteg'>Not Eligible</h3>";
+    resulttext = "Not Eligible";
+    classname = "eg";
   } else {
     console.log("Eligibile");
-    result.innerHTML = "<h3 class='eg'>Eligible</h3>";
+    resulttext = "Eligible";
+    classname = "noteg";
   }
 });
+Print(resulttext, classname);
 
 clearbtn.addEventListener("click", function () {
   ageInput.value = "";
