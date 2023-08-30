@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#result{
+    
+    font-size:large;
+    text-align:justify;
+}
+.alert{
+    color: blueviolet;
+}
+.eg{
+    color:green;
+}
+.noteg{
+    color:red
+}
