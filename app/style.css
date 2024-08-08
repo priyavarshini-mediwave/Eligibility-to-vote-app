@@ -5,6 +5,7 @@ body{
     
     font-size:large;
     text-align:justify;
+   
 }
 .alert{
     color: blueviolet;
@@ -14,4 +15,13 @@ body{
 }
 .noteg{
     color:red
+}
+.borderRed{
+    border: 1px solid red;
+}
+.borderGreen{
+    border: 1px solid rgb(57, 219, 57);
+}
+.borderBlack{
+    border: 1px solid;
 }

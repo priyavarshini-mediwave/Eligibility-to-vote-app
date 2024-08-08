@@ -39,33 +39,39 @@ calculateBtn.addEventListener('click', function() {
     // concatenation
     printToResult(result)
 })*/
-function Print(text, classn) {
-  if (text) result.innerHTML = "<h3 class='classn'>" + text + "</h3>";
+function Print(text, classn, borderClass) {
+  if (text) {
+    result.innerHTML = `<h3 class= ${classn} > ${text} </h3>`;
+    result.classList.add(borderClass);
+  }
 }
 
 let resulttext = "";
+let classname = "";
+let borderClass ="";
 checkbtn.addEventListener("click", function () {
   const age = ageInput.value;
   if (!age) {
     resulttext = "Enter age";
     classname = "alert";
-    Print(result, classname);
+    borderClass = "borderBlack";
+    Print(resulttext, classname,borderClass);
     return;
-    //console.log("Enter age");
   }
   if (age < 18) {
-    console.log("Not Eligibile");
     resulttext = "Not Eligible";
-    classname = "eg";
-  } else {
-    console.log("Eligibile");
-    resulttext = "Eligible";
     classname = "noteg";
+    borderClass = "borderRed";
+  } else {
+    resulttext = "Eligible";
+    classname = "eg";
+    borderClass = "borderGreen";
   }
+  Print(resulttext, classname,borderClass);
 });
-Print(resulttext, classname);
 
 clearbtn.addEventListener("click", function () {
   ageInput.value = "";
   result.innerHTML = "";
+  result.className = "";
 });
